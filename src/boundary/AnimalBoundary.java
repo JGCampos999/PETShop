@@ -102,7 +102,6 @@ public class AnimalBoundary extends Application implements EventHandler<ActionEv
 		txtNome.setText(a.getNome());
 		String data = sdf.format(a.getNascimento());
 		txtNasc.setText(data);
-		System.out.println(data);
 		txtPeso.setText(String.format("%6.2f", a.getPeso()));
 	}
 
@@ -113,7 +112,6 @@ public class AnimalBoundary extends Application implements EventHandler<ActionEv
 			a.setId(Integer.parseInt(txtId.getText()));
 			a.setPeso(Float.parseFloat(txtPeso.getText()));
 			Date d = sdf.parse(txtNasc.getText());
-			System.out.println(d);
 			a.setNascimento(d);
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
